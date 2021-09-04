@@ -11,15 +11,26 @@ function Board(props) {
     return [...a];
   }
 
-  let initValue = randomize();
-  const [renderedCards, setRenderedCards] = useState(initValue);
+  let cardsValue = randomize();
+  const [renderedCards, setRenderedCards] = useState(cardsValue);
+
+  const [clickedCards, updateClickedCards] = useState([]);
 
   useEffect(() => {
-    console.log(renderedCards);
-  }, [renderedCards])
+    console.log(clickedCards);
+  }, [clickedCards])
+
+  const getData = (data) => {
+    clickedCards.indexOf(data) === -1 ?
+    updateClickedCards([...clickedCards, data]) :
+    updateClickedCards([]);
+
+    cardsValue = randomize();
+    setRenderedCards(cardsValue);
+  }
 
   return <div className="Board">
-          {renderedCards.map(cardId => <Card key={cardId} id={cardId} />)}
+          {renderedCards.map(cardId => <Card key={cardId} id={cardId} sendToBoard={getData} />)}
          </div>
 }
 
