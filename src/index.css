@@ -21,15 +21,30 @@ h1 {
   padding: 20px;
 }
 
-card {
+.Card {
   margin: 10px;
   padding: 25px;
   border: 1px dashed black;
+  width: 150px;
+  height: 200px;
+}
+
+.cardImg {
+  width: 100px;
+  height: 100px;
+}
+
+.cardName {
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
 }
 
 .Board {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  max-width: 800px;
+  margin: auto;
 }
 
 .Score {
