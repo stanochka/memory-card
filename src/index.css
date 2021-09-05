@@ -80,3 +80,43 @@ footer a {
   font-weight: bold;
   text-decoration: none;
 }
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+  h1 {
+    font-size: 4em;
+  }
+
+  .Score {
+    font-size: 2em;
+  }
+
+  .allCards {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    margin: auto;
+  }
+
+  .Card {
+    width: 230px;
+    height: 280px;
+    margin: 50px auto;
+    text-align: center;
+  }
+
+  .cardImg {
+    width: 150px;
+    height: 150px;
+  }
+
+  .cardName {
+    font-size: 2em;
+  }
+
+  footer {
+    font-size: 1.2em;
+  }
+}
