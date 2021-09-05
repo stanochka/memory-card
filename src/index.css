@@ -24,9 +24,19 @@ h1 {
 .Card {
   margin: 10px;
   padding: 25px;
-  border: 1px dashed black;
+  border: 2px dashed black;
   width: 150px;
   height: 200px;
+  background-color: white;
+}
+
+.Card:hover {
+  cursor: pointer;
+  transform: scale(103%);
+}
+
+.Card:active {
+  transform: scale(99%);
 }
 
 .cardImg {
@@ -40,7 +50,7 @@ h1 {
   font-weight: bold;
 }
 
-.Board {
+.allCards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   max-width: 800px;
