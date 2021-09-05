@@ -32,11 +32,11 @@ h1 {
 
 .Card:hover {
   cursor: pointer;
-  transform: scale(103%);
+  transform: scale(1.03);
 }
 
 .Card:active {
-  transform: scale(99%);
+  transform: scale(0.99);
 }
 
 .cardImg {
